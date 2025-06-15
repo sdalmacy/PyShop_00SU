@@ -1,3 +1,6 @@
-from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
+
+def index(request):
+    """Simple view for payments home page."""
+    return HttpResponse('Payments Home')
