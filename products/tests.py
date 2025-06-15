@@ -6,11 +6,14 @@ from .models import Product, Offer
 class ProductModelTest(TestCase):
     def test_create_and_retrieve_product(self):
         product = Product.objects.create(
-            name='Django Mug', price=9.99, stock=10, image_url='http://example.com/mug.jpg'
+            name='Test Product',
+            price=9.99,
+            stock=10,
+            image_url='http://example.com/image.jpg',
         )
         self.assertEqual(Product.objects.count(), 1)
         retrieved = Product.objects.first()
-        self.assertEqual(retrieved.name, 'Django Mug')
+        self.assertEqual(retrieved.name, 'Test Product')
         self.assertEqual(str(retrieved.id), str(product.id))
 
 
@@ -22,12 +25,21 @@ class OfferModelTest(TestCase):
 
 
 class IndexViewTest(TestCase):
+    def setUp(self):
+        Product.objects.create(
+            name='Index Product',
+            price=1.0,
+            stock=5,
+            image_url='http://example.com/img.jpg',
+        )
+
     def test_index_displays_products(self):
-        Product.objects.create(name='Django Shirt', price=20, stock=5, image_url='http://example.com/shirt.jpg')
         response = self.client.get(reverse('products:index'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'index.html')
-        self.assertContains(response, 'Django Shirt')
+        self.assertIn('products', response.context)
+        self.assertEqual(len(response.context['products']), 1)
+        self.assertContains(response, 'Index Product')
 
 
 class NewViewTest(TestCase):
