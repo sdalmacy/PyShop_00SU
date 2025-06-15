@@ -123,3 +123,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Specify BigAutoField as the default primary key field type to avoid
+# auto-created primary key warnings in Django 3.2+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
