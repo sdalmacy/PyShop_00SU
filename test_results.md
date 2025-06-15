@@ -10,7 +10,7 @@ products.Product: (models.W042) Auto-created primary key used when not defining 
 System check identified 2 issues (0 silenced).
 ...
 ----------------------------------------------------------------------
-Ran 3 tests in 0.008s
+Ran 3 tests in 0.011s
 
 OK
 Destroying test database for alias 'default'...
