@@ -23,6 +23,7 @@ To setup the PyShop project, here is the following guidelines:
 * Visit Products Page using <code>http://127.0.0.1:8000/products/</code>
 * Visit New Arrival (Products) Page using <code>http://127.0.0.1:8000/products/new</code>
 * Wish to extend codebase/project? just say hi
+* Try the new checkout page at <code>http://127.0.0.1:8000/payments/checkout/</code> to see PayPal and Bitcoin options
 
 
 ## Contributing

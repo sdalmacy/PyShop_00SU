@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1>Checkout</h1>
+    <p>Select your payment method:</p>
+    <div id="paypal-button-container"></div>
+    <hr>
+    <h3>Pay with Bitcoin</h3>
+    <p>Send BTC to the following address:</p>
+    <code>YOUR-BITCOIN-ADDRESS</code>
+</div>
+<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+<script>
+    paypal.Buttons().render('#paypal-button-container');
+</script>
+{% endblock %}
