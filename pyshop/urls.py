@@ -18,6 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # Map the site root to the products app so '/' displays the index page
     path('', include('products.urls')),
-    path('products/', include('products.urls'))
+    path('products/', include('products.urls')),
 ]
