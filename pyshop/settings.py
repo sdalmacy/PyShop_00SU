@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'payments.apps.PaymentsConfig',
 ]
 
+# Use BigAutoField for primary keys by default
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
