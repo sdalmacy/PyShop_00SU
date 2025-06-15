@@ -32,6 +32,11 @@ class IndexViewTest(TestCase):
         self.assertIn('products', response.context)
         self.assertEqual(len(response.context['products']), 1)
 
+    def test_root_url_serves_index(self):
+        response = self.client.get('/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'index.html')
+
 class NewViewTest(TestCase):
     def test_new_view_returns_message(self):
         response = self.client.get('/products/new/')
