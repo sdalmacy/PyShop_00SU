@@ -10,7 +10,7 @@ To setup the PyShop project, here is the following guidelines:
 * Clone the repository <code>git clone https://github.com/thisishaykins/PyShop.git</code>
 * Open Project folder on terminal 
 * Prepare your virtual environment <code>python3 -m venv venv</code> 
-* Activate your virtual environment <code>source env/bin/activate</code>
+* Activate your virtual environment <code>source venv/bin/activate</code>
 * Install your requirements.txt file <code>pip install -r requirements.txt</code>
 * Create migrations using <code>python3 manage.py makemigrations</code> 
 * Run migrations <code>python3 manage.py migrate</code>
