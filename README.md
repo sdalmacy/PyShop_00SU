@@ -26,7 +26,7 @@ To setup the PyShop project, here is the following guidelines:
 
 
 ## Contributing
-Thank you for considering contributing to this small python project! For contribution discuss, please email to Akinshola Samuel [akinsholasamuel@gmail.com](mailto:akinsholasamuel@gmail.com).
+Thank you for considering contributing to this small python project! To discuss contributions, please email to Akinshola Samuel [akinsholasamuel@gmail.com](mailto:akinsholasamuel@gmail.com).
 
 
 ## Security Vulnerabilities
